@@ -27,7 +27,9 @@ describe("expire", function () {
         				done(err);
         			}
 
-        			ttl.should.be.less.than(600);
+        			ttl.should.be.within(0,600);
+
+                    done();
         		});
         	});
         });
